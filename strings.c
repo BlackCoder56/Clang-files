@@ -1,31 +1,36 @@
 #include <stdio.h>
 
-// Prototype for printS() function
-void printS(char text[]);
+void countS(char text[]);
 
 int main()
 {
-    char name[] = "IInam";
+    // char name[] = "Hi!";
+    // char name[30];
 
-    // printing string with %s
-    // printf("%s\n", name);
+    // printf("Enter text:");
+    // scanf("%c", &name);
 
-    // calling the printS function with argument
-    printS(name);
+    char name[30];
+
+    printf("Type your full name: \n");
+    scanf("%s", &name);
+
+
+    printf("Hello %s", name);
+    countS(name);
 
     return 0;
 }
 
-// Function to print char array
-void printS(char text[])
+// Function to count characters in a string
+void countS(char text[])
 {
     int counter = 0;
 
     while(text[counter] != '\0')
     {
-        printf("%c", text[counter]);
         counter++;
     }
 
-    printf("\n");
+    printf("%i\n", counter);
 }
